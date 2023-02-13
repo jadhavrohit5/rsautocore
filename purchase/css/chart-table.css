@@ -1,0 +1,91 @@
+@charset "UTF-8";
+.chart {
+	width: 100%;
+	float: left;
+	border: #D0D0D0 1px solid;
+	box-shadow: #E7E8E6 0 0 5px -1px;
+	background: #fff;
+}
+.chart table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.chart table td, .chart table th {
+	border: 1px solid #dddddd;
+	/*text-align: left;*/
+	padding: 6px;
+	word-break:normal;
+  font-size: .9em;
+}
+.chart table thead th {
+	border: 1px solid #666666;
+	color: #fff;
+	border-bottom-width: 2px;
+	background: #6F6F71; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#878A8F, #666666); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#878A8F, #666666); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#878A8F, #666666); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#878A8F, #666666); /* Standard syntax */
+}
+.chart td {
+	padding: 8px 20px;
+	-ms-word-break: break-word;
+	word-break: break-word;/* -webkit-hyphens: auto;
+ -moz-hyphens: auto;
+ hyphens: auto;
+ border-bottom: #DADBDD 1px solid;*/
+}
+.chart table thead th a{color: #fff;}
+.chart table thead th a .fa{color: #fff; font-size: 14px; padding-left: 5px;}
+.chart table thead th a:hover, .chart table thead th a.active{color: #FFD172;}
+.chart .input {
+	padding: 3px 5px;
+	margin: 0;
+}
+.chart tr.odd {
+	background-color: #F3F3F3;
+}
+.chart tr:hover td {
+	background-color: #D7EDEE;
+}
+.chart .action .button {
+	margin: 2px;
+	padding: 5px 10px;
+}
+.chart img {
+	vertical-align: middle;
+}
+.chart ul {
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+.chart li {
+	display: inline;
+	list-style-type: none;
+	padding: 0 10px 0 0;
+	margin: 0;
+}
+.chart input[type="text"] {
+	min-width: inherit;
+}
+.chart a .fa {
+	font-size: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	color: #747474;
+}
+
+.chart .stat .fa-check-circle {
+	color: #63B450;
+}
+.chart .stat .fa-times-circle {
+	color: #E80B0B;
+}
+.chart .action_btns a, .chart .action a {
+	margin: 0 5px;
+	display: inline-block;
+}
+.chart .action a .fa{color:red;}
+.chart .action a:hover .fa{color:#000000;}
+ 

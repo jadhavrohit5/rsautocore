@@ -1,0 +1,155 @@
+Sun Jan 09 2022 01.12 AM : Updated cart data
+Sun Jan 09 2022 01.12 AM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-09 01:12:38' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sun Jan 09 2022 01.12 AM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-09 01:12:38' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 01.33 AM : Updated cart data
+Mon Jan 10 2022 01.33 AM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 01:33:34' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 01.33 AM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 01:33:34' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 11.48 AM : Updated cart data
+Mon Jan 10 2022 11.48 AM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 11:48:07' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 11.48 AM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 11:48:07' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.10 PM : Updated cart data
+Mon Jan 10 2022 03.10 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 15:10:02' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.10 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 15:10:02' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.20 PM : Updated cart data
+Mon Jan 10 2022 03.20 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 15:20:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.20 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 15:20:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.30 PM : Updated cart data
+Mon Jan 10 2022 03.30 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 15:30:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.30 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 15:30:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.40 PM : Updated cart data
+Mon Jan 10 2022 03.40 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 15:40:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.40 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 15:40:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.50 PM : Updated cart data
+Mon Jan 10 2022 03.50 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 15:50:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 03.50 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 15:50:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 04.00 PM : Updated cart data
+Mon Jan 10 2022 04.00 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 16:00:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 04.00 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 16:00:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 04.10 PM : Updated cart data
+Mon Jan 10 2022 04.10 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 16:10:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 04.10 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 16:10:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 04.20 PM : Updated cart data
+Mon Jan 10 2022 04.20 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 16:20:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 04.20 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 16:20:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 04.30 PM : Updated cart data
+Mon Jan 10 2022 04.30 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 16:30:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 04.30 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 16:30:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 11.58 PM : Updated cart data
+Mon Jan 10 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-10 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 10 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-10 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Jan 11 2022 03.14 AM : Updated cart data
+Tue Jan 11 2022 03.14 AM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-11 03:14:21' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Jan 11 2022 03.14 AM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-11 03:14:21' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Jan 11 2022 11.58 PM : Updated cart data
+Tue Jan 11 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-11 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Jan 11 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-11 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Jan 12 2022 11.58 PM : Updated cart data
+Wed Jan 12 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-12 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Jan 12 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-12 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Jan 13 2022 11.58 PM : Updated cart data
+Thu Jan 13 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-13 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Jan 13 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-13 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Jan 14 2022 11.58 PM : Updated cart data
+Fri Jan 14 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-14 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Jan 14 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-14 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sat Jan 15 2022 11.58 PM : Updated cart data
+Sat Jan 15 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-15 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sat Jan 15 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-15 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sun Jan 16 2022 11.58 PM : Updated cart data
+Sun Jan 16 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-16 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sun Jan 16 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-16 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 17 2022 11.58 PM : Updated cart data
+Mon Jan 17 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-17 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 17 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-17 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Jan 18 2022 11.58 PM : Updated cart data
+Tue Jan 18 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-18 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Jan 18 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-18 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Jan 19 2022 11.58 PM : Updated cart data
+Wed Jan 19 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-19 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Jan 19 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-19 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Jan 20 2022 11.58 PM : Updated cart data
+Thu Jan 20 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-20 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Jan 20 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-20 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Jan 21 2022 11.58 PM : Updated cart data
+Fri Jan 21 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-21 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Jan 21 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-21 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sat Jan 22 2022 11.58 PM : Updated cart data
+Sat Jan 22 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-22 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sat Jan 22 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-22 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sun Jan 23 2022 11.58 PM : Updated cart data
+Sun Jan 23 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-23 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sun Jan 23 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-23 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 24 2022 11.58 PM : Updated cart data
+Mon Jan 24 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-24 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 24 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-24 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Jan 25 2022 11.58 PM : Updated cart data
+Tue Jan 25 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-25 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Jan 25 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-25 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Jan 26 2022 11.58 PM : Updated cart data
+Wed Jan 26 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-26 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Jan 26 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-26 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Jan 27 2022 11.58 PM : Updated cart data
+Thu Jan 27 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-27 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Jan 27 2022 11.58 PM : UPDATE tbl_rsa_app_offered_tdparts_temp SET status = '0', last_updated = '2022-01-27 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Jan 28 2022 11.58 PM : Updated cart data
+Fri Jan 28 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-28 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Jan 28 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-13 23:58:01' 
+Fri Jan 28 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-13 23:58:01' 
+Fri Jan 28 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-13 23:58:01' 
+Fri Jan 28 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-13 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Sat Jan 29 2022 11.58 PM : Updated cart data
+Sat Jan 29 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-29 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sat Jan 29 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-14 23:58:01' 
+Sat Jan 29 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-14 23:58:01' 
+Sat Jan 29 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-14 23:58:01' 
+Sat Jan 29 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-14 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Sun Jan 30 2022 11.58 PM : Updated cart data
+Sun Jan 30 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-30 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sun Jan 30 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-15 23:58:01' 
+Sun Jan 30 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-15 23:58:01' 
+Sun Jan 30 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-15 23:58:01' 
+Sun Jan 30 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-15 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Mon Jan 31 2022 11.58 PM : Updated cart data
+Mon Jan 31 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-01-31 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Jan 31 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-16 23:58:01' 
+Mon Jan 31 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-16 23:58:01' 
+Mon Jan 31 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-16 23:58:01' 
+Mon Jan 31 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-16 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Tue Feb 01 2022 11.58 PM : Updated cart data
+Tue Feb 01 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-02-01 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Feb 01 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-17 23:58:01' 
+Tue Feb 01 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-17 23:58:01' 
+Tue Feb 01 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-17 23:58:01' 
+Tue Feb 01 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-17 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Wed Feb 02 2022 11.58 PM : Updated cart data
+Wed Feb 02 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-02-02 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Feb 02 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-18 23:58:01' 
+Wed Feb 02 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-18 23:58:01' 
+Wed Feb 02 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-18 23:58:01' 
+Wed Feb 02 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-18 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Thu Feb 03 2022 11.58 PM : Updated cart data
+Thu Feb 03 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-02-03 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Feb 03 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-19 23:58:01' 
+Thu Feb 03 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-19 23:58:01' 
+Thu Feb 03 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-19 23:58:01' 
+Thu Feb 03 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-19 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Fri Feb 04 2022 11.58 PM : Updated cart data
+Fri Feb 04 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-02-04 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Feb 04 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-20 23:58:01' 
+Fri Feb 04 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-20 23:58:01' 
+Fri Feb 04 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-20 23:58:01' 
+Fri Feb 04 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-20 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Sat Feb 05 2022 11.58 PM : Updated cart data
+Sat Feb 05 2022 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2022-02-05 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sat Feb 05 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_vehicle_data WHERE postdate <= '2022-01-21 23:58:01' 
+Sat Feb 05 2022 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2022-01-21 23:58:01' 
+Sat Feb 05 2022 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2022-01-21 23:58:01' 
+Sat Feb 05 2022 11.58 PM : DELETE FROM tbl_rsa_app_regno_search WHERE postdate <= '2022-01-21 23:58:01' and id NOT IN (SELECT searchid FROM tbl_rsa_app_offered_tdparts_final) 
+Sun Feb 06 2022 01.40 PM : Daily Usage Notification
+Sun Feb 06 2022 01.40 PM : Message sent to Admin!
+Sun Feb 06 2022 01.44 PM : Daily Usage Notification
+Sun Feb 06 2022 01.44 PM : Message sent to Admin!
+Sun Feb 06 2022 01.47 PM : Daily Usage Notification
+Sun Feb 06 2022 01.47 PM : Message sent to Admin!
+Sun Feb 06 2022 02.00 PM : Daily Usage Notification
+Sun Feb 06 2022 02.00 PM : Message sent to Admin!

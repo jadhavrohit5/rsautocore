@@ -1,0 +1,163 @@
+/*SIDEBAR{---------------------START*/
+#sidebar-left {
+	width: 0;
+	position: absolute;
+	z-index: 999999;
+	top: 50px;
+	left: 0;
+	background-color: #222D32;
+	overflow: hidden;
+	transition: 0.5s;
+	padding: 0;
+	min-height: 100%;
+}
+a.sidebar-toggle {
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	color: #000;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	border-right: #eee 1px solid;
+}
+a.sidebar-toggle::before {
+	font-family: 'FontAwesome';
+	content: "\f0c9";
+	font-size: 18px;
+	line-height: 50px;
+}
+a.sidebar-toggle:hover {
+	color: #999;
+}
+a.sidebar-toggle span {
+	display: none;
+}
+.sidebar-menu {
+	width: 230px;
+	float: left;
+	background: #222D32;
+	color: #6E7D84;
+	font-size: 16px;
+	line-height: 22px;
+}
+.sidebar-menu h3 {
+	padding: 15px 0 15px 15px;
+	margin: 0;
+	font-size: .9em;
+	font-weight: normal;
+	background: #1A2226;
+}
+.sidebar-menu .menu {
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.sidebar-menu .menu li {
+	display: block;
+	position: relative;
+	margin-bottom: 2px;
+}
+.sidebar-menu .menu li a {
+	display: block;
+}
+.sidebar-menu .menu li span {
+	color: #b8c7ce;
+	display: block;
+	vertical-align: top;
+	padding: 12px 5px 12px 15px;
+}
+.sidebar-menu .menu ul {
+	border-bottom: #34454C 1px solid;
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+}
+.sidebar-menu .menu > li.select > a:hover span, .sidebar-menu .menu > li.select > span + span {
+	color: #fff;
+	box-shadow: #fff 3px 0 0 0px inset;
+	background: #1E282C;
+	transition: 300ms;
+}
+.sidebar-menu .menu > li.active > .current, .sidebar-menu .menu > li.active > a:first-child span {
+	box-shadow: #de2f2f 3px 0 0 0px inset;
+	background: #1E282C;
+	color: #fff;
+}
+
+.sidebar-menu .menu li.active ul {
+	background: #2C3B41;
+}
+.sidebar-menu .menu li.active ul li a span {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.sidebar-menu .menu ul li.active > .current, .sidebar-menu .menu ul li.active > a.current span, .sidebar-menu .menu ul li a:hover span {
+	color: #fff;
+}
+.sidebar-menu .menu > li.active > .current > span, .sidebar-menu .menu li.active > a > span{color: #fff;}
+.sidebar-menu .menu ul li.active > a > span .fa{color: #de2f2f;}
+
+
+.sidebar-menu .menu li ul span {
+	padding-left: 2.3em;
+}
+.sidebar-menu .menu li ul ul span {
+	padding-left: 3em;
+}
+.sidebar-menu .menu li ul ul ul span {
+	padding-left: 4em;
+}
+.sidebar-menu .menu li ul ul ul ul span {
+	padding-left: 5em;
+}
+/*multilevel collapsible menu*/
+
+.sidebar-menu .menu ul {
+	display: none;
+}
+.sidebar-menu .menu .submenu_btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 35px;
+	height: 45px;
+	font-size: 20px;
+	line-height: 45px;
+	font-weight: normal;
+	overflow: hidden;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+	padding: 0;
+	z-index: 1;
+	text-indent: -9999px;
+	background: #222D32 url(../images/caret.png) center 18px no-repeat;
+}
+.sidebar-menu .menu li.active > .submenu_btn {
+	background: #1E282C url(../images/caret.png) center -54px no-repeat;
+}
+.sidebar-menu .menu li.select > .submenu_btn {
+	background-color: #1E282C;
+	transition: 300ms;
+}
+.sidebar-menu .menu li.active ul .submenu_btn {
+	height: 32px;
+	line-height: 32px;
+	background-color: #2C3B41;
+	background-position: center 12px;
+}
+.sidebar-menu .menu li.active ul li.active .submenu_btn { /*background-color:#2C3B41;*/
+	background-position: center -61px;
+}
+.sidebar-menu .menu .fa {
+	width: 20px;
+}
+.sidebar-menu .menu ul .fa {
+	font-size: 11px;
+	margin-left: -15px;
+}
+/*SIDEBAR---------------------}END*/

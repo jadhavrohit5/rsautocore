@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+ * 8.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
+
+/* Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor the meta tag.
+ */
+@-ms-viewport {
+ width: device-width;
+}
+@viewport {
+ width: device-width;
+}
+
+@media (max-width: 1220px) {
+body {/*background:SandyBrown;*/} 
+}
+
+@media (max-width: 1069px) {
+body {/*background:Pink;*/}
+}
+
+@media (max-width: 999px) {
+body {/*background:Tomato;*/} 
+.pageheading {
+  padding: 20px 20px 0 4%;
+}
+.login-bg {
+ padding: 0 0 250px 0;
+ background: url(../images/page-bg1-mob.png) center bottom no-repeat;
+ background-size: contain;
+}
+#login {
+  margin: 10% auto 0 auto;
+}
+.search_home {
+	background: url(../images/page-bg2-mob.jpg) center center no-repeat;
+}
+.search_by {
+  max-width: 450px;  
+  width: auto;
+  float:none;
+ margin: 0 auto;
+ border-radius: 10px;
+ background: #fff;
+ padding: 20px;
+ margin-bottom: 20px;
+ text-align: center;
+ box-shadow: rgba(0,0,0, .2) 0 1px 3px;
+}
+.search_bynum {
+ width: 100%;
+ float: left;
+ min-height: 80vh;
+ padding: 0 0 300px 0;
+ background: url(../images/page-bg3.jpg) center 80% no-repeat;
+ background-size: contain;
+}
+.order {
+ padding: 0 20px 70px 20px;
+}
+#footer {
+ width: 100%;
+ /*float: left;*/
+ position: fixed;
+ bottom: 0;
+ padding: 2px 15px;
+ min-height: 60px;
+ background: #2e3538;
+ color: #5f6468;
+ z-index: 5;
+}
+#footer-nav li {
+	font-size: .9em;  line-height: 1;
+}
+}
+
+/* Collapse oversized image and pulled images after iPad breakpoint. */
+@media (max-width: 767px) {
+body {/*background:lightblue;*/} 
+}
+ 
+@media (max-width: 643px) {
+body {/*background:PaleGreen;*/} 
+
+}
+
+/* Mobile devices */
+@media (max-width: 359px) {
+	body { /*background:Wheat;*/}
+  /*
+	#header .logo{height: 50px; background: #fff;}
+	#header .logo img{ width: 120px; height: auto; padding-top: 5px;}
+	#headerRight a.minicart{margin:0;}
+	#headerRight a.logout {padding: 0;}
+	.parts_menu h3{font-size: 20px; line-height: 20px;}
+  
+  .search_results .listing li.item{flex-direction: column; align-items: flex-start;}
+  .search_results .listing li .img{ width: auto;}
+  .search_results .listing li .info {
+	width: auto;
+	padding: 5px;
+ }
+*/
+}
+
+@media (max-width: 319px) {
+body { /*background:Khaki;*/}
+}

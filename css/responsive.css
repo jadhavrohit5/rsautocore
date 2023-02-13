@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+ * 8.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
+
+/* Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor the meta tag.
+ */
+@-ms-viewport {
+ width: device-width;
+}
+@viewport {
+ width: device-width;
+}
+
+@media (max-width: 1220px) {
+body {
+/*background:SandyBrown;*/
+}
+.center {
+	width: 95%;
+}
+.sec_addpart .GD-70{width: 100%;}
+}
+
+@media (max-width: 1069px) {
+body {
+/*background:Pink;*/
+}
+.chart input[type="text"] {
+	width: 100%;
+}
+
+}
+
+@media (max-width: 999px) {
+body {
+/*background:Tomato;*/
+}
+#adminNav a span {
+	padding: 11px 12px 11px 0px;
+}
+#adminNav li .fa {
+	padding: 0;
+}
+.chart td, .chart thead th {
+	padding: 10px;
+}
+ #rightpanel, #leftpanel, #centerpanel {
+ width:100% !important;
+}
+#rightpanel .form_table {
+	width: 50%;
+	float: left;
+}
+.form_table td, .form_table th {
+	text-align: left;
+	display: block;
+	width: 100%;
+}
+input[type="text"], textarea {
+	width: 100%;
+}
+
+}
+
+/* Collapse oversized image and pulled images after iPad breakpoint. */
+@media (max-width: 767px) {
+body {
+/*background:lightblue;*/
+}
+#header .sitename {
+	width: 90%;
+	padding: 5px 15px 0 0;
+	text-align: right;
+	display: none;
+}
+#headerRight a.collapse_navbar {
+	display: block;
+}
+#leftpanel .form_table td {
+	display: block;
+	width: 100%;
+}
+
+input[type="text"] {
+	width: 100%;
+}
+/*Main menu start{---------------------------*/
+#admin_menu {
+	display: none;
+	height: auto;
+	border-top: #495C72 1px solid;
+}
+#adminNav {
+	width: 100%;
+	float: left;
+	height: auto;
+	border-top: #111D2B 1px solid;
+}
+#adminNav li {
+	float: none;
+	margin: 0;
+	border-top: #fff 1px solid;
+	border-bottom: #E1E3DF 1px solid;
+}
+#adminNav li span {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#adminNav li .fa {
+	padding-right: 10px;
+	font-size: 20px;
+	vertical-align: middle;
+}
+#adminNav li.m1 .fa {
+	vertical-align: top;
+}
+}
+
+/*Main menu ---------------------------}end*/
+
+@media (max-width: 643px) {
+body {
+/*background:PaleGreen;*/
+}
+.center {
+	width: 90%;
+}
+#header #logo {
+	padding: 0;
+}
+#header #logo a {
+	text-align: center;
+}
+#header #logo a img {
+	width: 100%;
+	max-width: 327px;
+	height: auto;
+}
+#headerRight .c {
+	display: none;
+}
+
+#rightpanel .form_table {
+	width: 100%;
+}
+
+#footer {
+	text-align: center;
+}
+}
+
+/* Mobile devices */
+@media (max-width: 359px) {
+body {
+/*background:Wheat;*/
+}
+ 
+#headerRight {
+	text-align: left;
+	width: 100%;
+}
+#headerRight .collapse_navbar {
+	border-radius: 10px 0 0 0;
+}
+#pageBlock {
+	padding: 10px;
+}
+.pageheading {
+	padding: 10px 2%;
+}
+.pageheading h1 {
+	padding: 10px 0;
+	width: 100%;
+}
+.pageheading .add, .pageheading .filter {
+	width: 100%;
+	text-align: center;
+	padding: 4px 0;
+}
+.pageheading .add a {
+	display: block;
+}
+}
+
+@media (max-width: 319px) {
+body {
+/*background:Khaki;*/
+}
+#adminBody {
+	padding-bottom: 100px;
+}
+#pageBlock {
+	padding: 5px;
+}
+.pageheading h1, .pageheading h1 i {
+	font-size: 18px;
+	line-height: 24px;
+}
+#leftpanel, #rightpanel {
+	min-width: inherit;
+}
+form #action_bar {
+	bottom: 50px;
+	text-align: center;
+}
+}

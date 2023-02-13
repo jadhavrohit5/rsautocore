@@ -1,0 +1,72 @@
+Wed Feb 01 2023 11.58 PM : Updated cart data
+Wed Feb 01 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-01 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Feb 01 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-17 00:00:00' 
+Wed Feb 01 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-17 00:00:00' 
+Thu Feb 02 2023 01.58 AM : Daily Usage Notification
+Thu Feb 02 2023 01.58 AM : Message has been sent.
+Thu Feb 02 2023 11.58 PM : Updated cart data
+Thu Feb 02 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-02 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Feb 02 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-18 00:00:00' 
+Thu Feb 02 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-18 00:00:00' 
+Fri Feb 03 2023 01.58 AM : Daily Usage Notification
+Fri Feb 03 2023 01.58 AM : Message has been sent.
+Fri Feb 03 2023 11.58 PM : Updated cart data
+Fri Feb 03 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-03 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Feb 03 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-19 00:00:00' 
+Fri Feb 03 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-19 00:00:00' 
+Sat Feb 04 2023 01.58 AM : Daily Usage Notification
+Sat Feb 04 2023 01.58 AM : Message has been sent.
+Sat Feb 04 2023 11.58 PM : Updated cart data
+Sat Feb 04 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-04 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sat Feb 04 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-20 00:00:00' 
+Sat Feb 04 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-20 00:00:00' 
+Sun Feb 05 2023 01.58 AM : Daily Usage Notification
+Sun Feb 05 2023 01.58 AM : Message has been sent.
+Sun Feb 05 2023 11.58 PM : Updated cart data
+Sun Feb 05 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-05 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sun Feb 05 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-21 00:00:00' 
+Sun Feb 05 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-21 00:00:00' 
+Mon Feb 06 2023 01.58 AM : Daily Usage Notification
+Mon Feb 06 2023 01.58 AM : Message has been sent.
+Mon Feb 06 2023 11.58 PM : Updated cart data
+Mon Feb 06 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-06 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Mon Feb 06 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-22 00:00:00' 
+Mon Feb 06 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-22 00:00:00' 
+Tue Feb 07 2023 01.58 AM : Daily Usage Notification
+Tue Feb 07 2023 01.58 AM : Message has been sent.
+Tue Feb 07 2023 11.58 PM : Updated cart data
+Tue Feb 07 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-07 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Tue Feb 07 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-23 00:00:00' 
+Tue Feb 07 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-23 00:00:00' 
+Wed Feb 08 2023 01.58 AM : Daily Usage Notification
+Wed Feb 08 2023 01.58 AM : Message has been sent.
+Wed Feb 08 2023 11.58 PM : Updated cart data
+Wed Feb 08 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-08 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Wed Feb 08 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-24 00:00:00' 
+Wed Feb 08 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-24 00:00:00' 
+Thu Feb 09 2023 01.58 AM : Daily Usage Notification
+Thu Feb 09 2023 01.58 AM : Message has been sent.
+Thu Feb 09 2023 11.58 PM : Updated cart data
+Thu Feb 09 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-09 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Thu Feb 09 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-25 00:00:00' 
+Thu Feb 09 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-25 00:00:00' 
+Fri Feb 10 2023 01.58 AM : Daily Usage Notification
+Fri Feb 10 2023 01.58 AM : Message has been sent.
+Fri Feb 10 2023 11.58 PM : Updated cart data
+Fri Feb 10 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-10 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Fri Feb 10 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-26 00:00:00' 
+Fri Feb 10 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-26 00:00:00' 
+Sat Feb 11 2023 01.58 AM : Daily Usage Notification
+Sat Feb 11 2023 01.58 AM : Message has been sent.
+Sat Feb 11 2023 11.58 PM : Updated cart data
+Sat Feb 11 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-11 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sat Feb 11 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-27 00:00:00' 
+Sat Feb 11 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-27 00:00:00' 
+Sun Feb 12 2023 01.58 AM : Daily Usage Notification
+Sun Feb 12 2023 01.58 AM : Message has been sent.
+Sun Feb 12 2023 11.58 PM : Updated cart data
+Sun Feb 12 2023 11.58 PM : UPDATE tbl_rsa_app_offered_items_temp SET status = '0', last_updated = '2023-02-12 23:58:01' WHERE status = '1' AND is_deleted = '0' AND is_offered = '0' AND (postdate >= now() - INTERVAL 15 DAY) 
+Sun Feb 12 2023 11.58 PM : DELETE FROM tbl_rsa_app_td_articles WHERE postdate <= '2023-01-28 00:00:00' 
+Sun Feb 12 2023 11.58 PM : DELETE FROM tbl_rsa_app_matched_articles WHERE postdate <= '2023-01-28 00:00:00' 
+Mon Feb 13 2023 01.58 AM : Daily Usage Notification
+Mon Feb 13 2023 01.58 AM : Message has been sent.

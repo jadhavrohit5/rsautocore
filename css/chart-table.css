@@ -1,0 +1,179 @@
+@charset "UTF-8";
+.chart {
+	width: 100%;
+	float: left;
+	border: #D0D0D0 1px solid;
+	box-shadow: #E7E8E6 0 0 5px -1px;
+	background: #fff;
+}
+.chart table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.chart table td, .chart table th {
+	border: 1px solid #dddddd;
+	/*text-align: left;*/
+	padding: 8px 15px;
+}
+.chart table thead th {
+	border: 1px solid #666666;
+	color: #fff;
+	border-bottom-width: 2px;
+	background: #6F6F71; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#878A8F, #666666); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#878A8F, #666666); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#878A8F, #666666); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#878A8F, #666666); /* Standard syntax */
+}
+.chart td {
+	padding: 8px 20px;
+	-ms-word-break: break-word;
+	word-break: break-word;/* -webkit-hyphens: auto;
+ -moz-hyphens: auto;
+ hyphens: auto;
+ border-bottom: #DADBDD 1px solid;*/
+}
+.chart table thead th a{color: #fff;}
+.chart table thead th a .fa{color: #fff; font-size: 14px; padding-left: 5px;}
+.chart table thead th a:hover, .chart table thead th a.active{color: #FFD172;}
+.chart .input {
+	padding: 3px 5px;
+	margin: 0;
+}
+.chart tr.odd {
+	background-color: #F3F3F3;
+}
+.chart tr:hover td {
+	background-color: #D7EDEE;
+}
+.chart .action .button {
+	margin: 2px;
+	padding: 5px 10px;
+}
+.chart img {
+	vertical-align: middle;
+}
+.chart ul {
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+.chart li {
+	display: inline;
+	list-style-type: none;
+	padding: 0 10px 0 0;
+	margin: 0;
+}
+.chart input[type="text"] {
+	min-width: inherit;
+}
+.chart a .fa {
+	font-size: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	color: #747474;
+}
+
+.chart .stat .fa-check-circle {
+	color: #63B450;
+}
+.chart .stat .fa-times-circle {
+	color: #E80B0B;
+}
+.chart .action_btns a, .chart .action a {
+	margin: 0 5px;
+	display: inline-block;
+}
+.chart .action a .fa{color:#BEBEBE;}
+.chart .action a:hover .fa{color:#000000;}
+.chart .action_toggle_btn {
+	display: none;
+}
+.chart .MOB {
+	display: none;
+	font-weight: bold;
+}
+
+@media (max-width: 1069px) {
+.chart input[type="text"] {
+	width: 100%;
+}
+}
+
+@media (max-width: 999px) {
+.chart td, .chart thead th {
+	padding: 10px;
+}
+.chart thead th.action_col {
+	width: auto;
+	text-align: center;
+}
+.chart .action .button {
+	margin: 4px 0;
+	padding: 5px 15px;
+	display: block;
+	text-align: center;
+	max-width: 150px;
+}
+}
+
+@media (max-width: 800px) {
+.chart table thead th {
+	display: none;
+}
+.chart table .col-1 {
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	border-top: #000 1px solid;
+}
+.chart table .col-last{ padding-bottom:20px;}
+.chart table .counter {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	text-align: center;
+	background: #000;
+	color: #fff;
+	margin: -6px 0 0 -17px;
+	overflow: hidden;
+}
+.chart .action {
+	display: block;
+	padding-bottom: 20px;
+}
+.chart .action .button {
+	margin: 4px;
+	display: inline-block;
+	text-align: center;
+	max-width: inherit;
+}
+.chart .MOB {
+	display: inline-block;
+}
+.chart table tr {
+	display: block;
+	width: 100%;/*border-bottom: #ccc 1px solid;*/
+}
+.chart table td {
+	display: block;
+	text-align: left;
+	 border: 0;
+	/* border-bottom-width: 0; */
+	padding-top: 5px;
+	padding-bottom: 5px;
+	vertical-align: top;
+}
+.chart table tr.m {
+	display: none;
+}
+.chart table tr.m td[colspan] { /*border-top:0; margin-top:-1px; position:relative; background:#FFF; */
+}
+}
+
+@media (max-width: 359px) {
+.chart .MOB {
+	display: block;
+}
+}
