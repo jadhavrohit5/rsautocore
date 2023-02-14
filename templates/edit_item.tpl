@@ -39,14 +39,6 @@
 		}
 
 	}
-
-	// function changeOEdisplayView(id) {
-	// 	if(id === 'oestock-data'){
-	// 		$('#main_table_view').removeClass('GD-65').addClass('GD-100');
-	// 	} else {
-	// 		$('#main_table_view').removeClass('GD-100').addClass('GD-65');
-	// 	}
-	// }
 //-->
 </script>
 {/literal}
