@@ -122,8 +122,10 @@ if ($valid) {
 			$ponum = $worksheet->getCellByColumnAndRow($col++, $row);
 			$custn = $worksheet->getCellByColumnAndRow($col++, $row);
 			$rsref = $worksheet->getCellByColumnAndRow($col++, $row);
+			$po_oe = $worksheet->getCellByColumnAndRow($col++, $row);
 			$oqnty = $worksheet->getCellByColumnAndRow($col++, $row);
 			$price = $worksheet->getCellByColumnAndRow($col++, $row);
+			$po_notes = $worksheet->getCellByColumnAndRow($col++, $row);
 			$odate = $worksheet->getCellByColumnAndRow($col++, $row)->getFormattedValue();
 
 			/*
@@ -141,7 +143,7 @@ if ($valid) {
 
 				//$ret_val=$obj_partstk->add_partstock(array('partid'=>addslashes($partid), 'type'=>addslashes($parttype), 'po_num'=>addslashes($ponum), 'supplier'=>addslashes($custn), 'rsac_ref'=>addslashes($rsref), 'po_quantity'=>addslashes($oqnty), 'po_price'=>addslashes($price), 'ord_date'=>$nwodate, 'postdate'=>$postdate, 'status'=>'1', 'sp_type'=>$sptype, 'is_sale'=>'0', 'is_purchase'=>'1'));
 				// updated on on 15-10-2020 
-				$ret_val=$obj_partstk->add_partstock(array('partid'=>addslashes($partid), 'type'=>addslashes($parttp), 'po_num'=>addslashes($ponum), 'supplier'=>addslashes($custn), 'rsac_ref'=>addslashes($rsref), 'po_quantity'=>addslashes($oqnty), 'po_price'=>addslashes($price), 'ord_date'=>$nwodate, 'postdate'=>$postdate, 'status'=>'1', 'sp_type'=>$sptype, 'is_sale'=>'0', 'is_purchase'=>'1'));
+				$ret_val=$obj_partstk->add_partstock(array('partid'=>addslashes($partid), 'type'=>addslashes($parttp), 'po_num'=>addslashes($ponum), 'supplier'=>addslashes($custn), 'rsac_ref'=>addslashes($rsref), 'po_oe' => addslashes($po_oe), 'po_quantity'=>addslashes($oqnty), 'po_price'=>addslashes($price), 'po_notes' => addslashes($po_notes), 'ord_date'=>$nwodate, 'postdate'=>$postdate, 'status'=>'1', 'sp_type'=>$sptype, 'is_sale'=>'0', 'is_purchase'=>'1'));
 				$artnum++;
 			}
 		}

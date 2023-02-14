@@ -142,8 +142,10 @@ $avgpn = $sumnprice/$sumnqnty;
 								<th align="left">PO Number</th>
 								<th align="left">Supplier</th>
 								<th align="left">RS Ref </th>
+								<th align="left">OE</th>
 								<th align="left">Quantity</th>
 								<th align="left">Price</th>
+								<th align="left">Notes</th>
 								<th align="left">Date</th>
 								<th width="100" align="center">Actions</th>
 							</tr>
@@ -151,7 +153,7 @@ $avgpn = $sumnprice/$sumnqnty;
 						<tbody>
 <?php
 $i=1;
-$sql = "SELECT id,partid, po_num,so_num,supplier,customer,rsac_ref,po_quantity,po_price,ord_date,is_sale,is_purchase FROM tbl_rsa_parts_stock2 WHERE is_purchase = '1' AND status = '1' AND is_deleted = '0' AND po_num = '" . addslashes($ponum) . "' ORDER by ord_date DESC";
+$sql = "SELECT id,partid, po_num,so_num,supplier,customer,rsac_ref,po_quantity,po_price,ord_date,is_sale,is_purchase,po_oe,po_notes FROM tbl_rsa_parts_stock2 WHERE is_purchase = '1' AND status = '1' AND is_deleted = '0' AND po_num = '" . addslashes($ponum) . "' ORDER by ord_date DESC";
 //echo $sql." <br />=================================================<br />";
 $result_set = mysqli_query($ndbconn, $sql);
 while($row = mysqli_fetch_array($result_set)){
@@ -161,8 +163,10 @@ while($row = mysqli_fetch_array($result_set)){
 								<td align="left"><span class="MOB">PO Number:</span> <?php echo $row['po_num']; ?></td>
 								<td align="left"><span class="MOB">Supplier:</span> <?php echo $row['supplier']; ?></td>
 								<td align="left"><span class="MOB">RS Ref:</span> <?php echo $row['rsac_ref']; ?></td>
+								<td align="left"><span class="MOB">OE</span> <?php echo $row['po_oe']; ?></td>
 								<td align="left"><span class="MOB">Quantity:</span> <?php echo $row['po_quantity']; ?></td>
 								<td align="left"><span class="MOB">Price:</span> &pound;<?php echo $row['po_price']; ?></td>
+								<td align="left"><span class="MOB">Price:</span><?php echo $row['po_notes']; ?></td>
 								<td align="left"><span class="MOB">Date:</span> <?php echo pobe_format_dt($row['ord_date']); ?></td>
 								<td align="center"><span class="action"><!-- <a href="sales_data.php?mode=delete&ponum=<?php //echo $_GET['ponum']; ?>&type=<?php //echo $_GET['type']; ?>&partid=<?php //echo $row['partid']; ?>" title="Delete"><i class="fa fa-trash-o"></i></a> --></span></td>
 							</tr>
@@ -206,8 +210,10 @@ $avgpn = $sumnprice/$sumnqnty;
 								<th align="left">PO Number</th>
 								<th align="left">Supplier</th>
 								<th align="left">RS Ref </th>
+                                <th align="left">OE</th>
 								<th align="left">Quantity</th>
 								<th align="left">Price</th>
+                                <th align="left">Notes</th>
 								<th align="left">Date</th>
 								<th width="100" align="center">Actions</th>
 							</tr>
@@ -215,7 +221,7 @@ $avgpn = $sumnprice/$sumnqnty;
 						<tbody>
 <?php
 $i=1;
-$sql = "SELECT id,partid, po_num,so_num,supplier,customer,rsac_ref,so_quantity,so_price,ord_date,is_sale,is_purchase FROM tbl_rsa_parts_stock2 WHERE is_sale = '1' AND status = '1' AND is_deleted = '0' AND so_num = '" . addslashes($sonum) . "' ORDER by ord_date DESC";
+$sql = "SELECT id,partid, po_num,so_num,supplier,customer,rsac_ref,so_quantity,so_price,ord_date,is_sale,is_purchase,so_oe,so_notes FROM tbl_rsa_parts_stock2 WHERE is_sale = '1' AND status = '1' AND is_deleted = '0' AND so_num = '" . addslashes($sonum) . "' ORDER by ord_date DESC";
 //echo $sql." <br />=================================================<br />";
 $result_set = mysqli_query($ndbconn, $sql);
 while($row = mysqli_fetch_array($result_set)){
@@ -225,8 +231,10 @@ while($row = mysqli_fetch_array($result_set)){
 								<td align="left"><span class="MOB">PO Number:</span> <?php echo $row['so_num']; ?></td>
 								<td align="left"><span class="MOB">Customerr:</span> <?php echo $row['customer']; ?></td>
 								<td align="left"><span class="MOB">RS Ref:</span> <?php echo $row['rsac_ref']; ?></td>
+								<td align="left"><span class="MOB">OE</span> <?php echo $row['so_oe']; ?></td>
 								<td align="left"><span class="MOB">Quantity:</span> <?php echo $row['so_quantity']; ?></td>
 								<td align="left"><span class="MOB">Price:</span> &pound;<?php echo $row['so_price']; ?></td>
+								<td align="left"><span class="MOB">Price:</span><?php echo $row['so_notes']; ?></td>
 								<td align="left"><span class="MOB">Date:</span> <?php echo pobe_format_dt($row['ord_date']); ?></td>
 								<td align="center"><span class="action"><!-- <a href="sales_data.php?mode=delete&sonum=<?php //echo $_GET['sonum']; ?>&type=<?php //echo $_GET['type']; ?>&partid=<?php //echo $row['partid']; ?>" title="Delete"><i class="fa fa-trash-o"></i></a> --></span></td>
 							</tr>
@@ -282,8 +290,10 @@ $avgsp = $sumsprice/$sumsqnty;
 								<th align="left">PO Number</th>
 								<th align="left">Supplier/Customer</th>
 								<th align="left">RS Ref </th>
+								<th align="left">OE</th>
 								<th align="left">Quantity</th>
 								<th align="left">Price</th>
+								<th align="left">Notes</th>
 								<th align="left">Date</th>
 								<th width="100" align="center">Actions</th>
 							</tr>
@@ -293,7 +303,7 @@ $avgsp = $sumsprice/$sumsqnty;
 $i=1;
 ///$sql = "SELECT id,po_num,so_num,supplier,customer,rsac_ref,quantity,price,ord_date,is_sale,is_purchase FROM tbl_rsa_parts_stock WHERE status = '1' AND partid = '" . addslashes($partid) . "' ORDER by ord_date DESC";
 //	id	partid	type	po_num	so_num	supplier	customer	rsac_ref	partname	po_quantity	so_quantity	po_price	so_price	ord_date	postdate	status	sp_type	is_sale	is_purchase	oldpartid
-$sql = "SELECT id,po_num,so_num,supplier,customer,rsac_ref,po_quantity,so_quantity,po_price,so_price,ord_date,sp_type,is_sale,is_purchase FROM tbl_rsa_parts_stock2 WHERE status = '1' AND is_deleted = '0' AND partid = '" . addslashes($partid) . "' ORDER by ord_date DESC";
+$sql = "SELECT id,po_num,so_num,supplier,customer,rsac_ref,po_quantity,so_quantity,po_price,so_price,ord_date,sp_type,is_sale,is_purchase,so_oe,po_oe,po_notes,so_notes FROM tbl_rsa_parts_stock2 WHERE status = '1' AND is_deleted = '0' AND partid = '" . addslashes($partid) . "' ORDER by ord_date DESC";
 //echo $sql." <br />=================================================<br />";
 $result_set = mysqli_query($ndbconn, $sql);
 while($row = mysqli_fetch_array($result_set)){
@@ -304,8 +314,10 @@ while($row = mysqli_fetch_array($result_set)){
 								<td align="left"><span class="MOB">PO Number:</span>  <a href="sales_data.php?mode=show&sonum=<?php echo $row['so_num']; ?>&type=<?php echo $_GET['type']; ?>&partid=<?php echo $_GET['partid']; ?>"><?php echo $row['so_num']; ?></a></td>
 								<td align="left"><span class="MOB">Customer:</span> <?php echo $row['customer']; ?></td>
 								<td align="left"><span class="MOB">RS Ref:</span> <?php echo $row['rsac_ref']; ?></td>
+								<td align="left"><span class="MOB">RS Ref:</span> <?php echo $row['so_oe']; ?></td>
 								<td align="left"><span class="MOB">Quantity:</span> <?php echo $row['so_quantity']; ?></td>
 								<td align="left"><span class="MOB">Price:</span> &pound;<?php echo $row['so_price']; ?></td>
+								<td align="left"><span class="MOB">Price:</span><?php echo $row['so_notes']; ?></td>
 								<td align="left"><span class="MOB">Date:</span> <?php echo pobe_format_dt($row['ord_date']); ?></td>
 								<td align="center"><span class="action"><a href="sales_data.php?mode=delete&sno=<?php echo $row['id']; ?>&type=<?php echo $_GET['type']; ?>&partid=<?php echo $_GET['partid']; ?>" title="Delete"><i class="fa fa-trash-o"></i></a></span></td>
 							</tr>
@@ -317,8 +329,10 @@ while($row = mysqli_fetch_array($result_set)){
 								<td align="left"><span class="MOB">PO Number:</span> <a href="sales_data.php?mode=show&ponum=<?php echo $row['po_num']; ?>&type=<?php echo $_GET['type']; ?>&partid=<?php echo $_GET['partid']; ?>"><?php echo $row['po_num']; ?></a></td>
 								<td align="left"><span class="MOB">Supplier:</span> <?php echo $row['supplier']; ?></td>
 								<td align="left"><span class="MOB">RS Ref:</span> <?php echo $row['rsac_ref']; ?></td>
+								<td align="left"><span class="MOB">OE</span> <?php echo $row['po_oe']; ?></td>
 								<td align="left"><span class="MOB">Quantity:</span> <?php echo $row['po_quantity']; ?></td>
 								<td align="left"><span class="MOB">Price:</span> &pound;<?php echo $row['po_price']; ?></td>
+								<td align="left"><span class="MOB">Price:</span><?php echo $row['po_notes']; ?></td>
 								<td align="left"><span class="MOB">Date:</span> <?php echo pobe_format_dt($row['ord_date']); ?></td>
 								<td align="center"><span class="action"><a href="sales_data.php?mode=delete&sno=<?php echo $row['id']; ?>&type=<?php echo $_GET['type']; ?>&partid=<?php echo $_GET['partid']; ?>" title="Delete"><i class="fa fa-trash-o"></i></a></span>								
 								</td>
