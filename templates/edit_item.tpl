@@ -124,7 +124,7 @@ function del(str)
 					</div>
 					<p class="clear">&nbsp;</p>
 				</div>
-				<div class="GD-65">
+				<div class="GD-65" id="main_table_view">
 					<div class="form_table no-border">
 						{*<!-- <table width="100%">
 							{if $stockopt eq "1"}
@@ -143,7 +143,7 @@ function del(str)
 							{/if}
 						</table> -->*}
 						<div class="clear">&nbsp;</div>
-						<div class="GD-94">
+						<div class="GD-94" id="sub_main_table_view">
 							<div class="tab-block">
 								<ul class="tabs-nav">
 									<li class="GD-33 active"><a href="#part-data">Part Data</a></li>
@@ -293,6 +293,14 @@ function del(str)
 			$( ".tabs-nav li" ).removeClass( 'active' );
 			$this.parent().addClass( 'active' );
 			$( '.tab-content' ).stop( true, true ).hide().siblings( $this.attr( 'href' ) ).fadeIn();
+			if($tabid === '#oestock-data'){
+				$('#main_table_view').removeClass('GD-65').addClass('GD-100');
+				$('#sub_main_table_view').removeClass('GD-94').addClass('GD-100');
+
+			} else {
+				$('#main_table_view').removeClass('GD-100').addClass('GD-65');
+				$('#sub_main_table_view').removeClass('GD-100').addClass('GD-94');
+			}
 			e.preventDefault();
 		} );
 

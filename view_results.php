@@ -107,6 +107,23 @@ $att13 = 13;  // Pinion Type
 $att14 = 14;  // Pulley Grooves
 $att16 = 16;  // Plug Pins
 $att20 = 20;  // Sensor
+$att5 = 5;  // Piston MM
+$att6 = 6; // Pad Gap
+$att38 = 38; //Lock Stops Size
+$att39 = 39; // Lock Stops Colour
+$att54 = 54; // Actuator Type
+$att69 = 69; // Plug Wires
+$att15 = 15;// Pulley Type
+$att27 = 27;// Mounting Points
+$att71 = 71;// Rear Head No
+$att25 = 25;// Amps
+$att30 = 30;// Teeth
+$att31 = 31;// Rotation
+$att40 = 40; // Outer teething wheel side
+$att56 = 56; // ABS Ring Ã˜ (mm/
+$att57 = 57; // Flange Ã˜ (mm)
+$att62 = 62; // Teeth, ABS ring
+$att64 = 64;  //Overall Length (mm)
 /*--------------------------------------------------------------------------------*/
 
 	$ret_valtp=$obj_srchdt->get_searchparts_details(array('searchid'=>addslashes($schid)));
@@ -204,6 +221,32 @@ if(isset($_REQUEST['mode']))
 				$gsreqcnt[$i]['manufacturer']=stripslashes($row_reqcnt[$i]['manufacturer']);
 				$gsreqcnt[$i]['make']=stripslashes($row_reqcnt[$i]['make']);
 				$gsreqcnt[$i]['model']=stripslashes($row_reqcnt[$i]['model']);
+                if($ptype == 14) {
+                $gsreqcnt[$i]['type']=pobe_get_attribute_data($att1,$row_reqcnt[$i]['id']);
+                }
+                if($ptype == 14){
+                $gsreqcnt[$i]['actuator_type']=pobe_get_attribute_data($att54,$row_reqcnt[$i]['id']);
+                }
+                if($ptype == 13){
+                $gsreqcnt[$i]['length']=pobe_get_attribute_data($att9,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['outer_teething_wheel_side']=pobe_get_attribute_data($att40,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['abs_ring']=pobe_get_attribute_data($att56,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['flange']=pobe_get_attribute_data($att57,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['teeth_abs_ring']=pobe_get_attribute_data($att62,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['overall_length']=pobe_get_attribute_data($att64,$row_reqcnt[$i]['id']);
+                }
+
+                if($ptype == 15 or $ptype == 16 or $ptype == 17){
+                $gsreqcnt[$i]['plug_pins']=pobe_get_attribute_data($att16,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['pulley_grooves']=pobe_get_attribute_data($att14,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['pulley_size']=pobe_get_attribute_data($att2,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['pulley_type']=pobe_get_attribute_data($att15,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['mounting_points']=pobe_get_attribute_data($att27,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['rear_head_no']=pobe_get_attribute_data($att71,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['amps']=pobe_get_attribute_data($att25,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['teeth']=pobe_get_attribute_data($att30,$row_reqcnt[$i]['id']);
+                $gsreqcnt[$i]['rotation']=pobe_get_attribute_data($att31,$row_reqcnt[$i]['id']);
+                }
 
 				//  --------------------------------------------------------------------------------
 				$gsreqcnt[$i]['notes']=stripslashes($row_reqcnt[$i]['notes']);

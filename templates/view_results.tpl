@@ -55,8 +55,8 @@ function del(str)
 					<table>
 						<thead>
 							<tr>
-								<th width="30" align="left" style="width:30px;">#</th>
-								<th align="left"><a href="#">Part Type</a></th>
+								{*<th width="30" align="left" style="width:30px;">#</th>*}
+								{*<th align="left"><a href="#">Part Type</a></th>*}
 								<th align="left"><a href="#" class="active">RS Reference</a></th>
 								<th align="left"><a href="#">Stock<!-- A Grade --></a></th>
 								{*<!-- <th align="left"><a href="#">B Grade</a></th> -->*}
@@ -93,21 +93,50 @@ function del(str)
 								{if $ptype eq 1 or $ptype eq 2 or $ptype eq 9 or $ptype eq 10 or $ptype eq 11}
 								<th width="150" align="left">Notes</th>
 								{/if}  -->*}
+								{if $ptype eq 14}
+									<th align="left"><a href="#">Type</a></th>
+								{/if}
+								{if $ptype eq 15 or $ptype eq 16}
+									<th align="left"><a href="#">Pulley Diameter</a></th>
+									<th align="left"><a href="#">Pulley Grooves</a></th>
+								{/if}
+								{if $ptype eq 15 or $ptype eq 16}
+									<th align="left"><a href="#">Plug Pins</a></th>
+								{/if}
+								{if $ptype eq 14}
+									<th width="150" align="left">Actuator Type</th>
+								{/if}
+								{if $ptype eq 15}
+									<th width="150" align="left">Pulley Type</th>
+									<th width="150" align="left">Mounting Points</th>
+									<th width="150" align="left">Rear Head No</th>
+								{/if}
+								{if $ptype eq 16}
+									<th width="150" align="left">Pulley Type</th>
+									<th width="150" align="left">Amps (A)</th>
+									<th width="150" align="left">Mounting Points</th>
+								{/if}
+								{if $ptype eq 17}
+									<th width="150" align="left">Mounting Points</th>
+									<th width="150" align="left">Teeth</th>
+									<th width="150" align="left">Rotation</th>
+								{/if}
 								<th width="200" align="center">Actions</th>
 							</tr>
 						</thead>
 						<tbody>            
 							{section name=i loop=$gsreqcnt}
 							<tr class="{cycle values="odd,"} itemrow{$gsreqcnt[i].partid}" id="item-r{$gsreqcnt[i].cnt}">
-								<td align="left" class="col-1" nowrap><span class="counter">{$gsreqcnt[i].cnt}</span></td>
-								<td align="left" nowrap><span class="MOB">Part Type:</span>  {$gsreqcnt[i].parttype} </td>
+								{*<td align="left" class="col-1" nowrap><span class="counter">{$gsreqcnt[i].cnt}</span></td>*}
+								{*<td align="left" nowrap><span class="MOB">Part Type:</span>  {$gsreqcnt[i].parttype} </td>*}
 								<td align="left" nowrap><span class="MOB">RS Reference:</span> {$gsreqcnt[i].grprsac}{*{$gsreqcnt[i].rsref}*}</td>
 								{*<!-- <td align="left"><span class="MOB">A Grade:</span> {$gsreqcnt[i].a_grade}</td> -->*}
 								{*<!-- <td align="left"><span class="MOB">B Grade:</span> {$gsreqcnt[i].b_grade}</td> -->*}
 								<td align="left"><span class="MOB">Stock:</span> {$gsreqcnt[i].totalstock}</td>
 								<td align="left"><span class="MOB">Manufacturer:</span> {$gsreqcnt[i].manufacturer}</td>
 								<td align="left"><span class="MOB">Make:</span> {$gsreqcnt[i].make}</td>
-								<td align="left"><span class="MOB">Model:</span> {$gsreqcnt[i].model}</td>
+								{*<td align="left"><span class="MOB">Model:</span> {$gsreqcnt[i].model}</td>*}
+								<td align="center" nowrap><span class="action"><a href="#" class="tooltip" title="{$gsreqcnt[i].model}"><i class="fa fa-automobile"></i></a></td>
 								{*<!-- {if $ptype eq 1}
 								<td align="left"><span class="MOB">Pulley Grooves:</span> {$gsreqcnt[i].pulley_grooves}</td>
 								<td align="left"><span class="MOB">Pulley Size:</span> {$gsreqcnt[i].pulley_size}</td>
@@ -137,14 +166,50 @@ function del(str)
 								{if $ptype eq 1 or $ptype eq 2 or $ptype eq 9 or $ptype eq 10 or $ptype eq 11}
 								<td align="left" class="fontsize12"><span class="MOB">Notes:</span> {$gsreqcnt[i].notes}</td>
 								{/if} -->*}
+								{if $ptype eq 14 }
+								<td align="left"><span class="MOB">Type:</span> {$gsreqcnt[i].type}</td>
+								{/if}
+								{if $ptype eq 15 or $ptype eq 16}
+								<td align="left"><span class="MOB">Type:</span> {$gsreqcnt[i].pulley_size}</td>
+								<td align="left"><span class="MOB">Pulley Grooves:</span> {$gsreqcnt[i].pulley_grooves}</td>
+								{/if}
+								{if $ptype eq 15 or $ptype eq 16}
+								<td align="left"><span class="MOB">Plug Pins:</span> {$gsreqcnt[i].plug_pins}</td>
+								{/if}
+								{if $ptype eq 14}
+								<td align="left"><span class="MOB">Actuator Type:</span> {$gsreqcnt[i].actuator_type}</td>
+								{/if}
+								{if $ptype eq 13}
+								<td align="left"><span class="MOB">Length:</span> {$gsreqcnt[i].length}</td>
+								<td align="left"><span class="MOB">Length:</span> {$gsreqcnt[i].overall_length}</td>
+								<td align="left"><span class="MOB">Length:</span> {$gsreqcnt[i].flange}</td>
+								<td align="left"><span class="MOB">Length:</span> {$gsreqcnt[i].abs_ring}</td>
+								<td align="left"><span class="MOB">Length:</span> {$gsreqcnt[i].teeth_abs_ring}</td>
+								<td align="left"><span class="MOB">Length:</span> {$gsreqcnt[i].outer_teething_wheel_side}</td>
+								{/if}
+								{if $ptype eq 15}
+								<td align="left"><span class="MOB">Pulley Type:</span> {$gsreqcnt[i].pulley_type}</td>
+								<td align="left"><span class="MOB">Mounting Points:</span> {$gsreqcnt[i].mounting_points}</td>
+								<td align="left"><span class="MOB">Rear Head No:</span> {$gsreqcnt[i].rear_head_no}</td>
+								{/if}
+								{if $ptype eq 16}
+								<td align="left"><span class="MOB">Pulley Type:</span> {$gsreqcnt[i].pulley_type}</td>
+								<td align="left"><span class="MOB">Amps:</span> {$gsreqcnt[i].amps}</td>
+								<td align="left"><span class="MOB">Mounting Points:</span> {$gsreqcnt[i].mounting_points}</td>
+								{/if}
+								{if $ptype eq 17}
+								<td align="left"><span class="MOB">Mounting Points:</span> {$gsreqcnt[i].mounting_points}</td>
+								<td align="left"><span class="MOB">Teeth:</span> {$gsreqcnt[i].teeth}</td>
+								<td align="left"><span class="MOB">Rotation:</span> {$gsreqcnt[i].rotation}</td>
+								{/if}
 								<td align="center"><span class="action">
 									{if $adminusertype eq "delopt"}
+									<a href="view_part.php?type={$ptype}&partid={$gsreqcnt[i].partid}&schid={$schid}" class="tooltip" title="View Details"><i class="fa fa-search"></i></a>
 									{if $gsreqcnt[i].pphoto ne ""}<a href="{$gsreqcnt[i].pphoto}" class="image-link tooltip" data-title="{$gsreqcnt[i].rsref}" data-source="view_part.php?type={$ptype}&partid={$gsreqcnt[i].partid}&schid={$schid}" title="See Image"><i class="fa fa-picture-o"></i></a>{else}<i class="fa fa-ellipsis-h"></i>{/if}
-									<a href="view_part.php?type={$ptype}&partid={$gsreqcnt[i].partid}&schid={$schid}" class="tooltip" title="View Details"><i class="fa fa-search"></i></a> 
 									</span>
 									{else}
+									<a href="update_part.php?type={$ptype}&partid={$gsreqcnt[i].partid}" class="tooltip" title="View Details"><i class="fa fa-search"></i></a>
 									{if $gsreqcnt[i].pphoto ne ""}<a href="{$gsreqcnt[i].pphoto}" class="image-link tooltip" data-title="{$gsreqcnt[i].rsref}" data-source="update_part.php?type={$ptype}&partid={$gsreqcnt[i].partid}" title="See Image"><i class="fa fa-picture-o"></i></a>{else}<i class="fa fa-ellipsis-h"></i>{/if}
-									<a href="update_part.php?type={$ptype}&partid={$gsreqcnt[i].partid}" class="tooltip" title="View Details"><i class="fa fa-search"></i></a> 
 									{/if}
 								</td>
 							</tr>
