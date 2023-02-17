@@ -170,7 +170,25 @@ if(isset($_POST['pageaction']) && $_POST['pageaction'] == 'updatepart') {
 					$agrddata = isset($val['qtydata']) ? (int)$val['qtydata'] : 0;
 					$a_grade_val = $a_grade + $agrddata;
 
-					$obj_partdt->update_partsdata_oe_stock(array('oe_one'=>addslashes($val['oeone']), 'oe_two'=>addslashes($val['oetwo']), 'oemone'=>addslashes($val['oemone']), 'oemtwo'=>addslashes($val['oemtwo']), 'qty_data'=>addslashes($a_grade_val), 'location'=>addslashes($val['location']), 'last_updated'=>$dateposted), array('id'=>$val['itemid'],'partid'=>$partid));
+                    $b_grade_val = 0;
+                    $b_grade_location = '';
+                    if ($ptypeid == 14 or $ptypeid == 15) {
+                        $b_grade = isset($val['b_grade_itemqty']) ? (int)$val['b_grade_itemqty'] : 0;
+                        $bgrddata = isset($val['b_grade_qty']) ? (int)$val['b_grade_qty'] : 0;
+                        $b_grade_val = $b_grade + $bgrddata;
+                        $b_grade_location = $val['b_grade_location'];
+                    }
+
+                    $c_grade_val = 0;
+                    $c_grade_location = '';
+                    if ($ptypeid == 14) {
+                        $c_grade = isset($val['c_grade_itemqty']) ? (int)$val['c_grade_itemqty'] : 0;
+                        $cgrddata = isset($val['c_grade_qty']) ? (int)$val['c_grade_qty'] : 0;
+                        $c_grade_val = $c_grade + $cgrddata;
+                        $c_grade_location = $val['c_grade_location'];
+                    }
+
+					$obj_partdt->update_partsdata_oe_stock(array('oe_one'=>addslashes($val['oeone']), 'oe_two'=>addslashes($val['oetwo']), 'oemone'=>addslashes($val['oemone']), 'oemtwo'=>addslashes($val['oemtwo']), 'qty_data'=>addslashes($a_grade_val), 'location'=>addslashes($val['location']), 'b_grade_qty' => addslashes($b_grade_val), 'b_grade_location' => addslashes($b_grade_location), 'c_grade_qty' => addslashes($c_grade_val), 'c_grade_location' => addslashes($c_grade_location), 'last_updated'=>$dateposted), array('id'=>$val['itemid'],'partid'=>$partid));
 
 				}
 			} 
@@ -254,7 +272,7 @@ if(isset($_REQUEST['partid'])) {
 		// added on 03-01-2023  
 		$grprsac = isset($_REQUEST['grprsac']) ? $_REQUEST['grprsac'] : stripslashes($row_partdt[0]['group_rsac']);
 		//$total_stock = pobe_group_total_stock($grprsac);
-		$total_stock = pobe_group_total_stock($partid);
+		$total_stock = pobe_group_total_stock($partid, $ptypeid);
 
 		$smarty->assign('grprsac',$grprsac); 
 		$smarty->assign('total_stock',$total_stock); 

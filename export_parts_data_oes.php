@@ -61,9 +61,22 @@ $heading[] = "OE 1#";
 $heading[] = "OE 2#";
 $heading[] = "OEM 1#";
 $heading[] = "OEM 2#";
-$heading[] = "QTY";
+$heading[] = "A Grade";
 $heading[] = "Location";
-$my_qry .= "c.oe_one, c.oe_two, c.oemone, c.oemtwo, c.qty_data, c.location,"; 
+$bGradeSelectFields = '';
+$cGradeSelectFields = '';
+if($ptype == 14 or $ptype == 15){
+$heading[] = "B Grade";
+$heading[] = "B Location";
+$bGradeSelectFields = "c.b_grade_qty, c.b_grade_location,";
+}
+
+if($ptype == 14){
+$heading[] = "C Grade";
+$heading[] = "C Location";
+$cGradeSelectFields = "c.c_grade_qty, c.c_grade_location,";
+}
+$my_qry .= "c.oe_one, c.oe_two, c.oemone, c.oemtwo, c.qty_data, c.location, ".$bGradeSelectFields." ".$cGradeSelectFields." ";
 }
 // -------------------------------------------
 
