@@ -61,8 +61,13 @@ $heading[] = "OE 1#";
 $heading[] = "OE 2#";
 $heading[] = "OEM 1#";
 $heading[] = "OEM 2#";
+$castNumberSelectFields = '';
+if($ptype == 17){
+$heading[] = "Cast Number";
+$castNumberSelectFields = "c.castnumber,";
+}
 $heading[] = "A Grade";
-$heading[] = "Location";
+$heading[] = "A Location";
 $bGradeSelectFields = '';
 $cGradeSelectFields = '';
 if($ptype == 14 or $ptype == 15){
@@ -76,7 +81,7 @@ $heading[] = "C Grade";
 $heading[] = "C Location";
 $cGradeSelectFields = "c.c_grade_qty, c.c_grade_location,";
 }
-$my_qry .= "c.oe_one, c.oe_two, c.oemone, c.oemtwo, c.qty_data, c.location, ".$bGradeSelectFields." ".$cGradeSelectFields." ";
+$my_qry .= "c.oe_one, c.oe_two, c.oemone, c.oemtwo, ".$castNumberSelectFields." c.qty_data, c.location, ".$bGradeSelectFields." ".$cGradeSelectFields." ";
 }
 // -------------------------------------------
 
