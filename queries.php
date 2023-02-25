@@ -1196,14 +1196,14 @@ function showPaginationSch($page, $pcount, $range, $ppage, $ptype, $schid) {
 	function pobe_group_parts_list($partid,$ptype)
 	{
 		$db = new build_sql();					
-		$db->query("SELECT id, partid, oe_one, oe_two, oemone, oemtwo, qty_data, location , b_grade_qty, b_grade_location, c_grade_qty, c_grade_location FROM tbl_rsa_oe_stock_data WHERE partid = '" . addslashes($partid) . "' AND ptype = '" . addslashes($ptype) . "' AND status = '1' AND is_deleted = '0' ORDER BY id ASC");
+		$db->query("SELECT id, partid, oe_one, oe_two, oemone, oemtwo, castnumber, qty_data, location , b_grade_qty, b_grade_location, c_grade_qty, c_grade_location FROM tbl_rsa_oe_stock_data WHERE partid = '" . addslashes($partid) . "' AND ptype = '" . addslashes($ptype) . "' AND status = '1' AND is_deleted = '0' ORDER BY id ASC");
 
 		$grouppartslist = null;
 		$num = 1;
 		if($db->get_num_rows()) {
 			$element = 0;
 			while($clist = $db->fetch_array()){
-				$grouppartslist[$element++] = array("pid" => stripslashes($clist['id']), "itemloc" => stripslashes($clist['location']), "itemqty" => stripslashes($clist['qty_data']), "bgradeitemloc" => stripslashes($clist['b_grade_location']), "b_grade_itemqty" => stripslashes($clist['b_grade_qty']), "cgradeitemloc" => stripslashes($clist['c_grade_location']), "c_grade_itemqty" => stripslashes($clist['c_grade_qty']), "itemoeone" => stripslashes($clist['oe_one']), "itemoetwo" => stripslashes($clist['oe_two']), "itemoemone" => stripslashes($clist['oemone']), "itemoemtwo" => stripslashes($clist['oemtwo']), "qtydata" => 0, "cnt" => $num);
+				$grouppartslist[$element++] = array("pid" => stripslashes($clist['id']), "itemloc" => stripslashes($clist['location']), "itemqty" => stripslashes($clist['qty_data']), "bgradeitemloc" => stripslashes($clist['b_grade_location']), "b_grade_itemqty" => stripslashes($clist['b_grade_qty']), "cgradeitemloc" => stripslashes($clist['c_grade_location']), "c_grade_itemqty" => stripslashes($clist['c_grade_qty']), "itemoeone" => stripslashes($clist['oe_one']), "itemoetwo" => stripslashes($clist['oe_two']), "itemoemone" => stripslashes($clist['oemone']), "itemoemtwo" => stripslashes($clist['oemtwo']), "itemcastnumber" => stripslashes($clist['castnumber']), "qtydata" => 0, "cnt" => $num);
 				$num++;
 			}
 		}

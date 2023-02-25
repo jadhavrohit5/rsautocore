@@ -174,6 +174,9 @@ function del(str)
 												<td valign="top">OE 2#</td>
 												<td valign="top">OEM 1#</td>
 												<td valign="top">OEM 2#</td>
+												{if $ptypeid eq 17}
+													<td valign="top">Cast Number</td>
+												{/if}
 												<td valign="top">A Grade</td>
 												<td valign="top">Location</td>
 												{if $ptypeid eq 15 or $ptypeid eq 14}
@@ -194,6 +197,9 @@ function del(str)
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][oetwo]" id="oetwo[]" type="text" class="input" value="{$grouppartslist[i].itemoetwo}" maxlength="250" /></td>
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][oemone]" id="oemone[]" type="text" class="input" value="{$grouppartslist[i].itemoemone}" maxlength="250" /></td>
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][oemtwo]" id="oemtwo[]" type="text" class="input" value="{$grouppartslist[i].itemoemtwo}" maxlength="250" /></td>
+												{if $ptypeid eq 17}
+													<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][castnumber]" id="castnumber[]" type="text" class="input" value="{$grouppartslist[i].itemcastnumber}" maxlength="250" /></td>
+												{/if}
 												<td valign="top">{*<!-- <input name="pid[{$grouppartslist[i].cnt}][qty]" id="qty[]" type="text" class="input" value="{$grouppartslist[i].itemqty}" maxlength="6" /> -->*}<input name="a_grade1" type="text" class="input" value="{$grouppartslist[i].itemqty}" style="max-width: 90px;" disabled /><input type="hidden" name="pid[{$grouppartslist[i].cnt}][itemqty]" id="itemqty[]" value="{$grouppartslist[i].itemqty}">&nbsp;<input name="pid[{$grouppartslist[i].cnt}][qtydata]" id="qtydata[]" type="number" class="input" value="" maxlength="8" style="max-width: 100px;" /></td>
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][location]" id="location[]" type="text" class="input" value="{$grouppartslist[i].itemloc}" maxlength="250" /></td>
 												{*only if part= 14 or 15 i.e TURBOCHARGER or AC COMPRESSOR*}

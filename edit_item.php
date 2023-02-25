@@ -188,7 +188,12 @@ if(isset($_POST['pageaction']) && $_POST['pageaction'] == 'updatepart') {
                         $c_grade_location = $val['c_grade_location'];
                     }
 
-					$obj_partdt->update_partsdata_oe_stock(array('oe_one'=>addslashes($val['oeone']), 'oe_two'=>addslashes($val['oetwo']), 'oemone'=>addslashes($val['oemone']), 'oemtwo'=>addslashes($val['oemtwo']), 'qty_data'=>addslashes($a_grade_val), 'location'=>addslashes($val['location']), 'b_grade_qty' => addslashes($b_grade_val), 'b_grade_location' => addslashes($b_grade_location), 'c_grade_qty' => addslashes($c_grade_val), 'c_grade_location' => addslashes($c_grade_location), 'last_updated'=>$dateposted), array('id'=>$val['itemid'],'partid'=>$partid));
+                    $cast_number = '';
+                    if ($ptypeid == 17) {
+                        $cast_number = isset($val['castnumber']) ? $val['castnumber'] : '';
+                    }
+
+					$obj_partdt->update_partsdata_oe_stock(array('oe_one'=>addslashes($val['oeone']), 'oe_two'=>addslashes($val['oetwo']), 'oemone'=>addslashes($val['oemone']), 'oemtwo'=>addslashes($val['oemtwo']), 'castnumber'=>addslashes($cast_number), 'qty_data'=>addslashes($a_grade_val), 'location'=>addslashes($val['location']), 'b_grade_qty' => addslashes($b_grade_val), 'b_grade_location' => addslashes($b_grade_location), 'c_grade_qty' => addslashes($c_grade_val), 'c_grade_location' => addslashes($c_grade_location), 'last_updated'=>$dateposted), array('id'=>$val['itemid'],'partid'=>$partid));
 
 				}
 			} 
