@@ -1196,14 +1196,14 @@ function showPaginationSch($page, $pcount, $range, $ppage, $ptype, $schid) {
 	function pobe_group_parts_list($partid,$ptype)
 	{
 		$db = new build_sql();					
-		$db->query("SELECT id, partid, oe_one, oe_two, oemone, oemtwo, qty_data, location FROM tbl_rsa_oe_stock_data WHERE partid = '" . addslashes($partid) . "' AND ptype = '" . addslashes($ptype) . "' AND status = '1' AND is_deleted = '0' ORDER BY id ASC");
+		$db->query("SELECT id, partid, oe_one, oe_two, oemone, oemtwo, castnumber, qty_data, location , b_grade_qty, b_grade_location, c_grade_qty, c_grade_location FROM tbl_rsa_oe_stock_data WHERE partid = '" . addslashes($partid) . "' AND ptype = '" . addslashes($ptype) . "' AND status = '1' AND is_deleted = '0' ORDER BY id ASC");
 
 		$grouppartslist = null;
 		$num = 1;
 		if($db->get_num_rows()) {
 			$element = 0;
 			while($clist = $db->fetch_array()){
-				$grouppartslist[$element++] = array("pid" => stripslashes($clist['id']), "itemloc" => stripslashes($clist['location']), "itemqty" => stripslashes($clist['qty_data']), "itemoeone" => stripslashes($clist['oe_one']), "itemoetwo" => stripslashes($clist['oe_two']), "itemoemone" => stripslashes($clist['oemone']), "itemoemtwo" => stripslashes($clist['oemtwo']), "qtydata" => 0, "cnt" => $num);
+				$grouppartslist[$element++] = array("pid" => stripslashes($clist['id']), "itemloc" => stripslashes($clist['location']), "itemqty" => stripslashes($clist['qty_data']), "bgradeitemloc" => stripslashes($clist['b_grade_location']), "b_grade_itemqty" => stripslashes($clist['b_grade_qty']), "cgradeitemloc" => stripslashes($clist['c_grade_location']), "c_grade_itemqty" => stripslashes($clist['c_grade_qty']), "itemoeone" => stripslashes($clist['oe_one']), "itemoetwo" => stripslashes($clist['oe_two']), "itemoemone" => stripslashes($clist['oemone']), "itemoemtwo" => stripslashes($clist['oemtwo']), "itemcastnumber" => stripslashes($clist['castnumber']), "qtydata" => 0, "cnt" => $num);
 				$num++;
 			}
 		}
@@ -1212,11 +1212,19 @@ function showPaginationSch($page, $pcount, $range, $ppage, $ptype, $schid) {
 	}
 
 	//  added on 08-01-2023    
-	function pobe_group_total_stock($partid)
+	function pobe_group_total_stock($partid, $ptypeid = '')
 	{
 		$db = new build_sql();
-		$db->query(" SELECT SUM(qty_data) as tot_stock FROM tbl_rsa_oe_stock_data WHERE partid = '" . addslashes($partid) . "' AND status = '1' AND is_deleted = '0'");
-		$rec = $db->fetch_array();
+        $sum_b_qty = '';
+        $sum_c_qty = '';
+        if ($ptypeid == 14 or $ptypeid == 15) {
+            $sum_b_qty = "+ SUM(b_grade_qty)";
+        }
+        if ($ptypeid == 14) {
+            $sum_c_qty = " + SUM(c_grade_qty)";
+        }
+        $db->query(" SELECT (SUM(qty_data) " . $sum_b_qty . " " . $sum_c_qty . ") as tot_stock FROM tbl_rsa_oe_stock_data WHERE partid = '" . addslashes($partid) . "' AND status = '1' AND is_deleted = '0'");
+        $rec = $db->fetch_array();
 		$tot_stock = number_format($rec['tot_stock']);
 		return $tot_stock;
 	}	
@@ -1285,7 +1293,7 @@ function showPaginationSch($page, $pcount, $range, $ppage, $ptype, $schid) {
 		$db->query("SELECT id FROM tbl_rsa_parts WHERE status = '1' AND is_deleted = '0' AND is_main = '1' AND part_type = '" . addslashes($ptype) . "' AND id < '" . addslashes($id) . "' GROUP BY group_rsac order by id DESC LIMIT 1 ");
 		//HAVING COUNT(group_rsac)=1 
 		$rec = $db->fetch_array();
-		$previd = stripslashes($rec['id']);
+        $previd = isset($rec['id']) ? stripslashes($rec['id']) : '';
 		return $previd;
 	}	
 

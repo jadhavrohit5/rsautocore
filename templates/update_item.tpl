@@ -80,7 +80,7 @@
 					<div class="GD-50 L">&nbsp;</div>
 					<p class="clear">&nbsp;</p>
 				</div>
-				<div class="GD-65">
+				<div class="GD-65" id="main_table_view">
 					<div class="form_table no-border">
 						<table width="100%">
 							<tr>
@@ -93,7 +93,7 @@
 							</tr>
 						</table>
 						<div class="clear">&nbsp;</div>
-						<div class="GD-94">
+						<div class="GD-94" id="sub_main_table_view">
 							<div class="tab-block">
 								<ul class="tabs-nav">
 									<li class="GD-50 active"><a href="#part-data">Part Data</a></li>
@@ -152,8 +152,19 @@
 												<td valign="top">OE 2#</td>
 												<td valign="top">OEM 1#</td>
 												<td valign="top">OEM 2#</td>
-												<td valign="top">QTY</td>
+												{if $ptypeid eq 17}
+													<td valign="top">Cast Number</td>
+												{/if}
+												<td valign="top">A Grade</td>
 												<td valign="top">Location</td>
+												{if $ptypeid eq 15 or $ptypeid eq 14}
+													<td valign="top">B Grade</td>
+													<td valign="top">B Location</td>
+												{/if}
+												{if $ptypeid eq 14}
+													<td valign="top">C Grade</td>
+													<td valign="top">C Location</td>
+												{/if}
 												<td valign="top">&nbsp;</td>
 											</tr>
 											<!-- ---------------------------- -->
@@ -163,8 +174,29 @@
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][oetwo]" id="oetwo[]" type="text" class="input" value="{$grouppartslist[i].itemoetwo}" maxlength="250" /></td>
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][oemone]" id="oemone[]" type="text" class="input" value="{$grouppartslist[i].itemoemone}" maxlength="250" /></td>
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][oemtwo]" id="oemtwo[]" type="text" class="input" value="{$grouppartslist[i].itemoemtwo}" maxlength="250" /></td>
-												<td valign="top"><input name="a_grade1" type="text" class="input" value="{$grouppartslist[i].itemqty}" style="max-width: 90px;" disabled /><input type="hidden" name="pid[{$grouppartslist[i].cnt}][itemqty]" id="itemqty[]" value="{$grouppartslist[i].itemqty}">&nbsp;<input name="pid[{$grouppartslist[i].cnt}][qtydata]" id="qtydata[]" type="number" class="input" value="{$grouppartslist[i].qtydata}" maxlength="8" style="max-width: 100px;" /><!--  --></td>
+												{if $ptypeid eq 17}
+													<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][castnumber]" id="castnumber[]" type="text" class="input" value="{$grouppartslist[i].itemcastnumber}" maxlength="250" /></td>
+												{/if}
+												<td valign="top"><input name="a_grade1" type="text" class="input" value="{$grouppartslist[i].itemqty}" style="max-width: 48%;" disabled /><input type="hidden" name="pid[{$grouppartslist[i].cnt}][itemqty]" id="itemqty[]" value="{$grouppartslist[i].itemqty}">&nbsp;<input name="pid[{$grouppartslist[i].cnt}][qtydata]" id="qtydata[]" type="number" class="input" value="" maxlength="8" style="max-width: 50%;" /><!--  --></td>
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][location]" id="location[]" type="text" class="input" value="{$grouppartslist[i].itemloc}" maxlength="250" /></td>
+												{*only if part= 14 or 15 i.e TURBOCHARGER or AC COMPRESSOR*}
+												{if $ptypeid eq 15 or $ptypeid eq 14}
+													<td valign="top">
+														<input name="b_grade" type="text" class="input" value="{$grouppartslist[i].b_grade_itemqty}" style="max-width: 48%;" disabled />
+														<input type="hidden" name="pid[{$grouppartslist[i].cnt}][b_grade_itemqty]" id="b_grade_itemqty[]" value="{$grouppartslist[i].b_grade_itemqty}">
+														<input name="pid[{$grouppartslist[i].cnt}][b_grade_qty]" id="b_grade_qty[]" type="number" class="input" value="{$grouppartslist[i].b_grade_qty}" maxlength="8" style="max-width: 50%;" /><!--  -->
+													</td>
+													<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][b_grade_location]" id="b_grade_location[]" type="text" class="input" value="{$grouppartslist[i].bgradeitemloc}" maxlength="250" /></td>
+												{/if}
+												{*only if part= 14 i.e TURBOCHARGER*}
+												{if $ptypeid eq 14}
+													<td valign="top">
+														<input name="c_grade" type="text" class="input" value="{$grouppartslist[i].c_grade_itemqty}" style="max-width: 48%;" disabled />
+														<input type="hidden" name="pid[{$grouppartslist[i].cnt}][c_grade_itemqty]" id="b_grade_itemqty[]" value="{$grouppartslist[i].c_grade_itemqty}">
+														<input name="pid[{$grouppartslist[i].cnt}][c_grade_qty]" id="c_grade_qty[]" type="number" class="input" value="{$grouppartslist[i].c_grade_qty}" maxlength="8" style="max-width: 50%;" /><!--  -->
+													</td>
+													<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][c_grade_location]" id="c_grade_location[]" type="text" class="input" value="{$grouppartslist[i].cgradeitemloc}" maxlength="250" /></td>
+												{/if}
 												<td valign="top">{if $adminusertype eq "delopt"}<a href="JavaScript:del('edit_item.php?type={$ptypeid}&partid={$partid}&act=delete&psid={$grouppartslist[i].pid}');" class="tooltip del" title="Delete" ><i class="fa fa-trash-o"></i></a></span>{/if}</td>
 											</tr>
 											{/section}
@@ -228,6 +260,14 @@
 			$( ".tabs-nav li" ).removeClass( 'active' );
 			$this.parent().addClass( 'active' );
 			$( '.tab-content' ).stop( true, true ).hide().siblings( $this.attr( 'href' ) ).fadeIn();
+			if($tabid === '#oestock-data'){
+				$('#main_table_view').removeClass('GD-65').addClass('GD-100');
+				$('#sub_main_table_view').removeClass('GD-94').addClass('GD-100');
+
+			} else {
+				$('#main_table_view').removeClass('GD-100').addClass('GD-65');
+				$('#sub_main_table_view').removeClass('GD-100').addClass('GD-94');
+			}
 			e.preventDefault();
 		} );
 
