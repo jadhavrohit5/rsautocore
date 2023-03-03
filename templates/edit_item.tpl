@@ -228,23 +228,23 @@ function del(str)
 												{if $ptypeid eq 17}
 													<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][castnumber]" id="castnumber[]" type="text" class="input" value="{$grouppartslist[i].itemcastnumber}" maxlength="250" /></td>
 												{/if}
-												<td valign="top"><input name="a_grade1" type="text" class="input" value="{$grouppartslist[i].itemqty}" style="max-width: 90px;" disabled /><input type="hidden" name="pid[{$grouppartslist[i].cnt}][itemqty]" id="itemqty[]" value="{$grouppartslist[i].itemqty}">&nbsp;<input name="pid[{$grouppartslist[i].cnt}][qtydata]" id="qtydata[]" type="number" class="input" value="" maxlength="8" style="max-width: 100px;" /><!--  --></td>
+												<td valign="top"><input name="a_grade1" type="text" class="input" value="{$grouppartslist[i].itemqty}" style="max-width: 48%;" disabled /><input type="hidden" name="pid[{$grouppartslist[i].cnt}][itemqty]" id="itemqty[]" value="{$grouppartslist[i].itemqty}">&nbsp;<input name="pid[{$grouppartslist[i].cnt}][qtydata]" id="qtydata[]" type="number" class="input" value="" maxlength="8" style="max-width: 50%;" /><!--  --></td>
 												<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][location]" id="location[]" type="text" class="input" value="{$grouppartslist[i].itemloc}" maxlength="250" /></td>
 												{*only if part= 14 or 15 i.e TURBOCHARGER or AC COMPRESSOR*}
 												{if $ptypeid eq 15 or $ptypeid eq 14}
 													<td valign="top">
-															<input name="b_grade" type="text" class="input" value="{$grouppartslist[i].b_grade_itemqty}" style="max-width: 90px;" disabled />
+															<input name="b_grade" type="text" class="input" value="{$grouppartslist[i].b_grade_itemqty}" style="max-width: 48%" disabled />
 															<input type="hidden" name="pid[{$grouppartslist[i].cnt}][b_grade_itemqty]" id="b_grade_itemqty[]" value="{$grouppartslist[i].b_grade_itemqty}">
-															<input name="pid[{$grouppartslist[i].cnt}][b_grade_qty]" id="b_grade_qty[]" type="number" class="input" value="{$grouppartslist[i].b_grade_qty}" maxlength="8" style="max-width: 100px;" /><!--  -->
+															<input name="pid[{$grouppartslist[i].cnt}][b_grade_qty]" id="b_grade_qty[]" type="number" class="input" value="{$grouppartslist[i].b_grade_qty}" maxlength="8" style="max-width: 50%;" /><!--  -->
 													</td>
-													<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][b_grade_location]" id="b_grade_location[]" type="text" class="input" value="{$grouppartslist[i].bgradeitemloc}" maxlength="250" /></td>
+													<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][b_grade_location]" id="b_grade_location[]" type="text" class="input" value="{$grouppartslist[i].bgradeitemloc}" maxlength="250"" /></td>
 												{/if}
 												{*only if part= 14 i.e TURBOCHARGER*}
 												{if $ptypeid eq 14}
 													<td valign="top">
-														<input name="c_grade" type="text" class="input" value="{$grouppartslist[i].c_grade_itemqty}" style="max-width: 90px;" disabled />
+														<input name="c_grade" type="text" class="input" value="{$grouppartslist[i].c_grade_itemqty}" style="max-width: 48%;" disabled />
 														<input type="hidden" name="pid[{$grouppartslist[i].cnt}][c_grade_itemqty]" id="b_grade_itemqty[]" value="{$grouppartslist[i].c_grade_itemqty}">
-														<input name="pid[{$grouppartslist[i].cnt}][c_grade_qty]" id="c_grade_qty[]" type="number" class="input" value="{$grouppartslist[i].c_grade_qty}" maxlength="8" style="max-width: 100px;" /><!--  -->
+														<input name="pid[{$grouppartslist[i].cnt}][c_grade_qty]" id="c_grade_qty[]" type="number" class="input" value="{$grouppartslist[i].c_grade_qty}" maxlength="8" style="max-width: 50%;" /><!--  -->
 													</td>
 													<td valign="top"><input name="pid[{$grouppartslist[i].cnt}][c_grade_location]" id="c_grade_location[]" type="text" class="input" value="{$grouppartslist[i].cgradeitemloc}" maxlength="250" /></td>
 												{/if}
