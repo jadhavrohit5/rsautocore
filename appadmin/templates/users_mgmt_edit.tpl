@@ -176,6 +176,17 @@ function valForm(frm)
 								<label><input type="radio" name="sch_opt" value="3" {if $sch_opt eq '3'} checked {/if}> Both Searches&nbsp;&nbsp;&nbsp;&nbsp;
 							</td>
 						</tr>
+						<tr>
+							<td colspan="4" align="left"><strong>Pricing Display on APP</strong>:</td>
+						</tr>
+						<tr>
+							<td colspan="4" align="left">
+								<label><input type="radio" name="app_price_display" value="4" {if $app_price_display eq '4'} checked {/if}> RSA Purchase Price&nbsp;&nbsp;&nbsp;&nbsp;
+								<label><input type="radio" name="app_price_display" value="77" {if $app_price_display eq '77'} checked {/if}> Garage Price&nbsp;&nbsp;&nbsp;&nbsp;
+								<label><input type="radio" name="app_price_display" value="78" {if $app_price_display eq '78'} checked {/if}> Motor Factor Price&nbsp;&nbsp;&nbsp;&nbsp;
+								<label><input type="radio" name="app_price_display" value="79" {if $app_price_display eq '79'} checked {/if}> Dismantler Price&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+						</tr>
 						<!-- end  -->
 					</table>
 					<div class="row">

@@ -5,8 +5,12 @@
 <div class="order">
 	<div class="text_align_center">
 		<h3>RSAC Ref <strong class="greenText">{$ptrsac}</strong></h3>
-		<p><img src="images/thumbs-up.png" alt=""/></p>
-		<p class="fontsize20">Required Quantity: {$myreqqty}</p>
+		{if $myreqqty > 0}
+			<p><img src="images/thumbs-up.png" alt=""/></p>
+			<p class="fontsize20">Required Quantity: {$myreqqty}</p>
+		{else}
+			<p><img src="images/thumbs-down.png" alt=""/></p>
+		{/if}
 		<p class="fontsize20">Our Purchase Price: {$vdrcur}{$pprice}</p>
 	</div>
 	<div class="text_align_center">

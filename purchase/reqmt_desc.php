@@ -126,7 +126,12 @@ $imptdqnty = pobe_part_stock_imported_qnty($partid);       // added on 24-03-202
 
 // updated on 06-02-2023 
 if (($ptype == 9) || ($ptype == 10) || ($ptype == 11) || ($ptype == 12)){
-	$grtotstock = pobe_group_total_stock($partid);
+    $ptypeid = '';
+    $origin_part_type = array(9 => 14, 10 => 15);
+    if(array_key_exists($ptype, $origin_part_type)) {
+        $ptypeid = $origin_part_type[$ptype];
+    }
+	$grtotstock = pobe_group_total_stock($partid, $ptypeid);
 	$reqqty = $tstock - $grtotstock - $ofrqty - $ofrqty_tot - $imptdqnty;   
 	//echo "<br>". $reqqty ." + ". $tstock ." + ". $grtotstock ." + ". $ofrqty ." + ". $ofrqty_tot ." + ". $imptdqnty ."<br>";   
 } else {
@@ -135,7 +140,12 @@ if (($ptype == 9) || ($ptype == 10) || ($ptype == 11) || ($ptype == 12)){
 
 //$purchaseprice = stripslashes($rowpartdt[0]['purchase_price']);
 //$pprice = number_format(($purchaseprice), 2, '.', '');
-$pprice = pobe_view_purchase_price($partid);     //  added on 01-03-2022 
+if($reqqty > 0) {
+    $app_price_display  = pobe_user_app_price_display($wuserid);
+} else {
+    $app_price_display = 73;
+}
+$pprice = pobe_view_purchase_price($partid, $app_price_display);     //  added on 01-03-2022
 
 //-----------------------------------------------------------------------------------added on 26-02-2020 
 $myofrqty = pobe_part_stock_cart_quntity($vendorid,$wuserid,$partid);
@@ -168,7 +178,7 @@ if(isset($_POST['pageaction']) && $_POST['pageaction'] == 'partsupply') {
 
 	if($supplyqty < 1) {
 		$smarty->assign('msg',"Error - Supply Quantity less than 1.");
-	} elseif($supplyqty > $requirqty) {
+	} elseif(($supplyqty > $requirqty) && ($app_price_display != 73)) {
  		$smarty->assign('msg',"Error - Supply Quantity more than Required Quantity.");
 	} else {
 		$dateposted = date("Y-m-d H:i:s");

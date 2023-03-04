@@ -192,6 +192,17 @@ function valForm(frm)
 								<label><input type="radio" name="sch_opt" value="3"> Both Searches&nbsp;&nbsp;&nbsp;&nbsp;
 							</td>
 						</tr>
+						<tr>
+							<td colspan="4" align="left"><strong>Pricing Display on APP</strong>:</td>
+						</tr>
+						<tr>
+							<td colspan="4" align="left">
+								<label><input type="radio" name="app_price_display" value="4"> RSA Purchase Price&nbsp;&nbsp;&nbsp;&nbsp;
+								<label><input type="radio" name="app_price_display" value="77"> Garage Price&nbsp;&nbsp;&nbsp;&nbsp;
+								<label><input type="radio" name="app_price_display" value="78"> Motor Factor Price&nbsp;&nbsp;&nbsp;&nbsp;
+								<label><input type="radio" name="app_price_display" value="79"> Dismantler Price&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+						</tr>
 						<!-- end  -->
 					</table>
 					<div class="row">
