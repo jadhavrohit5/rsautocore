@@ -11,6 +11,8 @@
 		{else}
 			<p><img src="images/thumbs-down.png" alt=""/></p>
 		{/if}
+		<p class="fontsize15">We currently have no demand for this part</p>
+		<p class="fontsize20"><b>BUT WAIT, we can still offer you better<br> than scrap price</b></p>
 		<p class="fontsize20">Our Purchase Price: {$vdrcur}{$pprice}</p>
 	</div>
 	<div class="text_align_center">

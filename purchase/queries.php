@@ -898,7 +898,7 @@
 		$db = new build_sql();
 		$db->query(" SELECT attrdata FROM tbl_rsa_attributes_data WHERE attrid = '" . addslashes($attrid) . "' AND partid = '" . addslashes($partid) . "' AND status = '1' ");
 		$rec = $db->fetch_array();
-		$attrdata = stripslashes($rec['attrdata']);
+		$attrdata = isset($rec['attrdata']) ? stripslashes($rec['attrdata']) : '';
 		return $attrdata;
 	}	
 
