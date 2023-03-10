@@ -114,6 +114,7 @@
 			<li><a href="#">Privacy Statement</a></li>
 			<li><a href="#">Disclaimer</a></li>
 			<li><a href="#">Contact</a></li>
+			<li style="float: right"><a href="#">Property of RSAutomotive Core Ltd</a></li>
 		</ul>
 		<div class="chat_icon"><a href="#"><img src="images/chat.png" align="" alt="" /></a></div>
 		<div id="back_top"><a href="#header"><i class="fa fa-angle-up" aria-hidden="true"></i></a></div>
