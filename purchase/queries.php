@@ -898,14 +898,14 @@
 		$db = new build_sql();
 		$db->query(" SELECT attrdata FROM tbl_rsa_attributes_data WHERE attrid = '" . addslashes($attrid) . "' AND partid = '" . addslashes($partid) . "' AND status = '1' ");
 		$rec = $db->fetch_array();
-		$attrdata = stripslashes($rec['attrdata']);
+		$attrdata = isset($rec['attrdata']) ? stripslashes($rec['attrdata']) : '';
 		return $attrdata;
 	}	
 
-	function pobe_view_purchase_price($partid)
+	function pobe_view_purchase_price($partid, $app_price_display)
 	{
 		$db = new build_sql();
-		$db->query(" SELECT attrdata FROM tbl_rsa_attributes_data WHERE attrid = 4 AND partid = '" . addslashes($partid) . "' AND status = '1' ");
+		$db->query(" SELECT attrdata FROM tbl_rsa_attributes_data WHERE attrid = '" . addslashes($app_price_display) . "' AND partid = '" . addslashes($partid) . "' AND status = '1' ");
 		$rec = $db->fetch_array();
 		$purchaseprice = (float)stripslashes($rec['attrdata']);
 		$purchase_price = number_format(($purchaseprice), 2, '.', '');
@@ -957,14 +957,31 @@
 	}	
 
 	//  added on 03-02-2023    
-	function pobe_group_total_stock($partid)
+	function pobe_group_total_stock($partid, $ptypeid = '')
 	{
 		$db = new build_sql();
-		$db->query(" SELECT SUM(qty_data) as tot_stock FROM tbl_rsa_oe_stock_data WHERE partid = '" . addslashes($partid) . "' AND status = '1' AND is_deleted = '0'");
+        $sum_b_qty = '';
+        $sum_c_qty = '';
+        if ($ptypeid == 14 or $ptypeid == 15) {
+            $sum_b_qty = "+ SUM(b_grade_qty)";
+        }
+        if ($ptypeid == 14) {
+            $sum_c_qty = " + SUM(c_grade_qty)";
+        }
+		$db->query(" SELECT (SUM(qty_data) " . $sum_b_qty . " " . $sum_c_qty . ") as tot_stock FROM tbl_rsa_oe_stock_data WHERE partid = '" . addslashes($partid) . "' AND status = '1' AND is_deleted = '0'");
 		$rec = $db->fetch_array();
 		$tot_stock = number_format($rec['tot_stock']);
 		return $tot_stock;
-	}	
+	}
+
+    function pobe_user_app_price_display($adminid)
+    {
+        $db = new build_sql();
+        $db->query(" SELECT app_price_display FROM tbl_rsa_app_users WHERE id = '" . $adminid . "' ");
+        $rec = $db->fetch_array();
+        $usertype = stripslashes($rec['app_price_display']);
+        return $usertype;
+    }
 
 
 ?>

@@ -105,8 +105,11 @@ if(isset($_POST['pageaction']) && $_POST['pageaction'] == 'update') {
 	$webadmaction = 'updated';
 	$dateposted = date("Y-m-d H:i:s");
 
+    $app_price_display = trim($_REQUEST['app_price_display']);
+    //echo $app_price_display; die;
+
 //	updated on 04-08-2021  
-	$ret_val2=$obj_usrdata->update_siteusers(array('contact_person'=>addslashes($contactperson), 'contact_email'=>addslashes($contactemail), 'contact_phone'=>addslashes($contactphone), 'designation'=>addslashes($designation), 'country'=>addslashes($country), 'part_type'=>addslashes($type_opt), 'last_updated'=>$dateposted, 'cat_type'=>addslashes($grp_opt), 'rsadb_opt'=>$rsadb_opt, 'extdb_opt'=>$extdb_opt), array('id'=>$webadmid));
+	$ret_val2=$obj_usrdata->update_siteusers(array('contact_person'=>addslashes($contactperson), 'contact_email'=>addslashes($contactemail), 'contact_phone'=>addslashes($contactphone), 'designation'=>addslashes($designation), 'country'=>addslashes($country), 'part_type'=>addslashes($type_opt), 'last_updated'=>$dateposted, 'cat_type'=>addslashes($grp_opt), 'rsadb_opt'=>$rsadb_opt, 'extdb_opt'=>$extdb_opt, 'app_price_display' => $app_price_display), array('id'=>$webadmid));
 
 	header('location: users_mgmt_view.php?mode=show&id='.base64_encode($webadmid).'&msg='.base64_encode("User details updated successfully."));
 	die;
@@ -129,6 +132,7 @@ if(isset($_REQUEST['mode']))
 		$smarty->assign('country',stripslashes($row_webadm[0]['country']));
 		$smarty->assign('webadmstatus',$row_webadm[0]['user_status']);
 		$smarty->assign('webcreatedon',pobe_format_full_date($row_webadm[0]['datecreated']));
+        $smarty->assign('app_price_display',$row_webadm[0]['app_price_display']);
 
 //==================================updated on 04-08-2021 	
 		if(($row_webadm[0]['rsadb_opt'] == '1') && ($row_webadm[0]['extdb_opt'] == '1')) {

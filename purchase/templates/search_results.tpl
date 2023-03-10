@@ -19,8 +19,8 @@
 						<p>Required Quantity:&nbsp;{$gsreqcnt[i].req_qty}</p>
 						<div><a href="reqmt_desc.php?type={$parttype}&schid={$schid}&id={$gsreqcnt[i].partid}" class="button rs_btn">Select this part</a></div>
 						{else}
-						<p>Required Quantity:&nbsp;0</p>
-						<div><a href="reqmt_data.php?type={$parttype}&schid={$schid}&id={$gsreqcnt[i].partid}" class="button rs_btn">Select this part</a></div>
+{*						<p>Required Quantity: {$gsreqcnt[i].req_qty}</p>*}
+						<div><a href="reqmt_desc.php?type={$parttype}&schid={$schid}&id={$gsreqcnt[i].partid}" class="button rs_btn">Select this part</a></div>
 						{/if}
 					</div>
 				</li>

@@ -111,8 +111,9 @@ if(isset($_POST['pageaction']) && $_POST['pageaction'] == 'add') {
 			$rsadb_opt = '1';
 			$extdb_opt = '1';
 		}
+        $app_price_display = trim($_REQUEST['app_price_display']);
 
-		$ret_val=$obj_usrdata->add_siteusers(array('user_type_id'=>$webusrtypeid, 'account_type_id'=>$webacctypeid, 'user_name'=>addslashes($wadmusername), 'user_password'=>addslashes($wadmuserpass), 'user_typename'=>addslashes($usrtypename), 'contact_person'=>addslashes($contactperson), 'contact_email'=>addslashes($contactemail), 'contact_phone'=>addslashes($contactphone), 'designation'=>addslashes($designation), 'country'=>addslashes($country), 'part_type'=>addslashes($type_opt), 'user_status'=>'1', 'createdbyid'=>$createdbyid, 'datecreated'=>$dateposted, 'cat_type'=>addslashes($grp_opt), 'rsadb_opt'=>$rsadb_opt, 'extdb_opt'=>$extdb_opt));
+		$ret_val=$obj_usrdata->add_siteusers(array('user_type_id'=>$webusrtypeid, 'account_type_id'=>$webacctypeid, 'user_name'=>addslashes($wadmusername), 'user_password'=>addslashes($wadmuserpass), 'user_typename'=>addslashes($usrtypename), 'contact_person'=>addslashes($contactperson), 'contact_email'=>addslashes($contactemail), 'contact_phone'=>addslashes($contactphone), 'designation'=>addslashes($designation), 'country'=>addslashes($country), 'part_type'=>addslashes($type_opt), 'user_status'=>'1', 'createdbyid'=>$createdbyid, 'datecreated'=>$dateposted, 'cat_type'=>addslashes($grp_opt), 'rsadb_opt'=>$rsadb_opt, 'extdb_opt'=>$extdb_opt, 'app_price_display' => $app_price_display));
 
 
 		$ret_val2=$obj_usrdata->get_siteusers_details(array('user_name'=>addslashes($wadmusername),'datecreated'=>$dateposted));

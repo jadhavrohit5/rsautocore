@@ -188,7 +188,7 @@ if($ret_cur==1){
 		////$gsreqcnt[$i]['req_qty']=$row_reqcnt[$i]['target_stock'] - $row_reqcnt[$i]['a_grade'] - $row_reqcnt[$i]['b_grade'] - pobe_part_stock_offered($row_reqcnt[$i]['id']) - pobe_part_stock_cart_totqnty($row_reqcnt[$i]['id']);
 
 		if (($row_reqcnt[$i]['part_type'] == 14) || ($row_reqcnt[$i]['part_type'] == 15) || ($row_reqcnt[$i]['part_type'] == 16) || ($row_reqcnt[$i]['part_type'] == 17)){
-			$gsreqcnt[$i]['req_qty']=$row_reqcnt[$i]['target_stock'] - pobe_group_total_stock($row_reqcnt[$i]['id']) - pobe_part_stock_offered($row_reqcnt[$i]['id']) - pobe_part_stock_cart_totqnty($row_reqcnt[$i]['id']) - pobe_part_stock_imported_qnty($row_reqcnt[$i]['id']);         // updated on 24-03-2022 
+			$gsreqcnt[$i]['req_qty']=$row_reqcnt[$i]['target_stock'] - pobe_group_total_stock($row_reqcnt[$i]['id'], $row_reqcnt[$i]['part_type']) - pobe_part_stock_offered($row_reqcnt[$i]['id']) - pobe_part_stock_cart_totqnty($row_reqcnt[$i]['id']) - pobe_part_stock_imported_qnty($row_reqcnt[$i]['id']);         // updated on 24-03-2022
 		} else {
 			$gsreqcnt[$i]['req_qty']=$row_reqcnt[$i]['target_stock'] - $row_reqcnt[$i]['a_grade'] - $row_reqcnt[$i]['b_grade'] - pobe_part_stock_offered($row_reqcnt[$i]['id']) - pobe_part_stock_cart_totqnty($row_reqcnt[$i]['id']) - pobe_part_stock_imported_qnty($row_reqcnt[$i]['id']);         // updated on 24-03-2022 
 		}
